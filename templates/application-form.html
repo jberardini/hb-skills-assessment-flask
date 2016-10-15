@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Apply to Work with Us {% endblock %}
+
+{% block content %}
+  <h1>Apply to Work with Us</h1>
+  <p id="instructions">We currently have openings for software engineers, QA engineers, and product managers. Please enter your information below to apply.</p>
+  <form action="/application" method="POST">
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" class="input_field"><br><br>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" class="input_field" id="last_name"><br><br>
+    <label for="salary_requirement">Salary Requirement (as a number): $</label>
+    <input type="text" name="salary_requirement" class="input_field"><br><br>
+    <label for="position">Which position are you applying for?</label>
+    <select name="position" class="input_field">
+      <option value="software engineer">Software Engineer</option>
+      <option value="QA engineer">QA Engineer</option>
+      <option value="product manager">Product Manager</option>
+    </select><br><br>
+    <input type="submit" value="Apply" class="input_field">
+
+{% endblock %}
